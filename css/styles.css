@@ -1,10 +1,45 @@
+:root{
+    --primario:rgb(255, 0, 0);
+    --secundario:rgb(0, 0, 0);
+    --blanco:white;
+    --oscuro:black;
+    --tamaño-fuente:26px;
+
+}
+
 html{
    font-size: 62.5%;
 }
 
 body{
 
-    font-size: 16px; /*1rem = 16px*/
+    font-size: var(--tamaño-fuente);/*1rem = 16px*/
+    font-family: 'roboto';
+}
+
+fieldset{
+    border: none;
+}
+
+.contenedor{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.bg-secundario{
+    background-color: var(--primario)
+}
+
+.boton{
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    margin-top: 1rem;
 }
 
 h1{
@@ -15,13 +50,171 @@ h2{
     font-size: 1.8rem;
 }
 
-.titulo{
-    color: blue;
+.titulo {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 9rem;
     text-align: center;
-    font-size: 3.8rem;
+    color: #000000; 
+    margin: 2rem 0;
+}
+.titulo span {
+    display: inline-block;
+    font-size: 7.5rem;
+    color: #ff0000; 
+    animation: bounce 1.2s infinite;
 }
 
-.titulo span{
-    color: green;
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+p{
+    font-size: 2.6rem;
+}
+
+
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(255, 0, 0);
+}
+
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+    
+}
+
+.navegacion-principal a{
+    text-align: center;
+    color:var(--blanco);
+    text-decoration: none;
     font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 1rem 1rem 1rem;
+
+}
+
+.navegacion-principal a:hover{
+    color: black;
+    background-color: var(--blanco);
+
+}
+
+.hero{
+    background-image: url('../img/hero_3.jpeg');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+}
+
+.contenido-hero{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion{
+
+    display: flex;
+    justify-content: center;
+}
+
+.micontenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 1rem;
+
+}
+
+
+
+
+@media (min-width:768px){
+    .micontenido{
+        flex-direction: row;
+    }
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.contenido h3{
+    font-weight: normal;
+    color: var(--oscuro)
+
+}
+
+.contenido p{
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+}
+
+.icono{
+    width: 15rem;
+    height: 15rem;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hugogay h2{
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    text-align: center;
+}
+
+.formulario{
+    background-color: rgb(255, 0, 0);
+    width: min(60rem,100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--secundario);
+}
+
+.campo {
+    margin-bottom: 1rem;
+
+}
+
+.campo label{
+    color: var(--secundario);
+    font-weight: bold;
+    display: block;
+
 }

@@ -229,10 +229,38 @@ p{
 }
 
 
-#productes
+
+
+.bodyp{
+    color: var(--primario);
+    background-color: rgb(32, 32, 32);
+}
+.encabezadop{
+    justify-content: center;
+    font-size: 3rem;
+    text-align: center;
+}
+
 
 .titulop{
-    font-size: 20rem;
+
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 8rem;
     text-align: center;
-    color: #ff0000;
+    color: var(--primario)
+
+
+}
+
+.pokemons{
+    text-align: center;
+    display: flex;
+    gap: 50rem;
+    justify-content:center
+}
+
+.pokemons img{
+
+    width: 20rem;
+    border-radius: 1rem;
 }
